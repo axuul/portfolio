@@ -1,8 +1,11 @@
+// Importing saas files with globs
+const globImporter = require('node-sass-glob-importer')
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Axuul - Marketing Digital Agency`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `Edgar Yerena`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,6 +18,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-resolve-src`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        importer: globImporter()
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

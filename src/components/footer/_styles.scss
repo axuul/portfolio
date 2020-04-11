@@ -1,0 +1,23 @@
+.section.footer {
+  padding: 0;
+
+  & .section.footer-top {
+    background-color: $dark-gray;
+
+    & h4.title {
+      color: $pink;
+      font-family: $family-text;
+      font-weight: $weight-normal;
+      font-size: $size-3;
+    }
+  }
+
+  & .section.footer-bottom {
+    background-color: $black;
+    padding-top: $size-2;
+    padding-bottom: $size-2;
+    color: $white;
+    font-size: $size-2;
+    font-family: $family-text;
+  }
+}
