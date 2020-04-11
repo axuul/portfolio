@@ -5,13 +5,19 @@ import React from "react"
 import { Generic, Title } from "rbx"
 import PropTypes from 'prop-types'
 
-const SectionTitle = ({text, description, centered}) => {
+const SectionTitle = ({text, description, centered, topDescription}) => {
   return (
     <Title as="h2" className={centered ? `has-text-centered` : null}>
+      {(description && topDescription) &&
+        <Generic as="span" className="section-title-span-top">
+          {description}
+        </Generic>
+      }
+
       {text}
 
-      {description && 
-        <Generic as="span">
+      {(description && !topDescription) && 
+        <Generic as="span" className="section-title-span-bottom">
           {description}
         </Generic>
       }
@@ -22,11 +28,13 @@ const SectionTitle = ({text, description, centered}) => {
 SectionTitle.propTypes = {
   text: PropTypes.string.isRequired,
   centered: PropTypes.bool,
+  topDescription: PropTypes.bool,
   description: PropTypes.string
 }
 
 SectionTitle.defaultProps = {
   centered: true,
+  topDescription: false,
   description: null
 }
 

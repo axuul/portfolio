@@ -8,14 +8,29 @@ import Layout from "components/layout/index"
 import Section from "elements/section"
 import SectionTitle from "elements/sectionTitle"
 
+// Import Libraries
+import { Column } from "rbx"
+
 const StyleGuide = () => {
   return (
     <Layout>
       <Section>
-        <SectionTitle
-          text="Section title"
-          description="This is a small description"
-        />
+        <Column.Group>
+          <Column size={6}>
+            <SectionTitle
+              text="Section title"
+              description="This is a small description on top"
+              topDescription={true}
+            />
+          </Column>
+
+          <Column size={6}>
+            <SectionTitle
+              text="Section title"
+              description="This is a small description on bottom"
+            />
+          </Column>
+        </Column.Group>
       </Section>
     </Layout>
   )

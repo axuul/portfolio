@@ -1,12 +1,13 @@
 // Google fonts
 @import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 
 // Fonts variables
 $family-attention: 'Rubik', sans-serif;
 $family-text: 'Poppins', sans-serif;
 
 $weight-normal: 400;
+$weight-medium: 500;
 $weigth-bold: 700;
 
 body, html {
@@ -19,7 +20,17 @@ h2.title {
   font-weight: $weigth-bold;
   color: $dark-gray;
 
-  & span {
+  & span.section-title-span-top {
+    display: block;
+    color: $pink;
+    text-transform: uppercase;
+    font-family: $family-text;
+    font-weight: $weight-medium;
+    font-size: $size-4;
+    margin-bottom: $size-2;
+  }
+
+  & span.section-title-span-bottom {
     color: $mid-gray;
     margin-top: $size-2;
     font-size: $size-6;
